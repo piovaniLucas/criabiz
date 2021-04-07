@@ -2544,20 +2544,20 @@ textarea.form-control {
 }
 
 .verticais-neg__brands-main img {
-  width: 135px;
+  width: 110px;
   margin-left: 38px;
 }
 
 @media screen and (max-width: 992px) {
   .verticais-neg__brands-main img {
-    width: 180px;
+    width: 100px;
     margin-left: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .verticais-neg__brands-main img {
-    width: 110px;
+    width: 90px;
     margin-left: 16px;
   }
 }
@@ -2601,7 +2601,7 @@ textarea.form-control {
 }
 
 .verticais-neg__brands-sub img {
-  width: 130px;
+  width: 145px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -2611,13 +2611,13 @@ textarea.form-control {
 
 @media screen and (max-width: 992px) {
   .verticais-neg__brands-sub img {
-    width: 103px;
+    width: 115px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .verticais-neg__brands-sub img {
-    width: 100px;
+    width: 105px;
   }
 }
 
