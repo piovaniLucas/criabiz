@@ -73,7 +73,7 @@
             $('#form-submit').attr('disabled', 'true');
 
             $.ajax({
-                url: "https://formsquash.io/f/dMIPTXMFpTk8Q3cRyRGe",
+                url: "https://formsquash.io/f/GPhJ6JznUP5APqVPKESN",
                 method: "POST",
                 dataType: "json",
                 contentType: "application/json; charset=iso-8859-1",
