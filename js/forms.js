@@ -20,7 +20,8 @@
     });
 
     // Formulário acessar (LOGIN)
-    $("#form-empresas").validate({
+    $(".empresas-sec__form").each(function(){
+        $(this).validate({
         rules: {
             empresa: {
                 required: true
@@ -50,6 +51,7 @@
         messages: {}
 
     });
+})
 
     // Form empresa JS
     setTimeout(() => {
@@ -58,52 +60,52 @@
         }
     }, 800);
 
-    $('#form-next')
+    $('#form-next, .form-next-button')
         .click(function () {
-            if ($("#form-empresas").valid()) {
-                $('#step-1').hide();
-                $('#step-2').fadeIn();
-                $('#form-marker-2').addClass('active');
+            const target = $(this).attr('data-target') || "#form-empresas";;
+            if ($(target).valid()) {
+                $(target).find('.form-step-1, #step-1').hide();
+                $(target).find('.form-step-2, #step-2').fadeIn();
+                $(target).find('.step-2').addClass('active');
             }
         });
 
-    $('#form-submit').click(function () {
-        if ($("#form-empresas").valid()) {
-
-            $('#form-submit').attr('disabled', 'true');
-
-            $.ajax({
-                url: "https://formsquash.io/f/GPhJ6JznUP5APqVPKESN",
-                method: "POST",
-                dataType: "json",
-                contentType: "application/json; charset=iso-8859-1",
-                data: JSON.stringify({
-                    type: $('#form-empresas')
-                        .find('input[name="type"]')
-                        .val(),
-                    email: $('#form-empresas')
-                        .find('input[name="email"]')
-                        .val(),
-                    pessoa: $('#form-empresas')
-                        .find('input[name="pessoa"]')
-                        .val(),
-                    empresa: $('#form-empresas')
-                        .find('input[name="empresa"]')
-                        .val(),
-                    cidade: $('#form-empresas')
-                        .find('input[name="cidade"]')
-                        .val(),
-                    telefone: $('#form-empresas')
-                        .find('input[name="telefone"]')
-                        .val(),
-                    resumo: $('#form-empresas')
-                        .find('textarea[name="resumo"]')
-                        .val()
+        $('#form-submit, .form-submit-button').click(function () {
+            const target = $(this).attr('data-target') || "#form-empresas";
+            if ($(target).valid()) {
+                $(this).attr('disabled', 'true');
+                $.ajax({
+                    url: "https://formsquash.io/f/GPhJ6JznUP5APqVPKESN",
+                    method: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=iso-8859-1",
+                    data: JSON.stringify({
+                        type: $(target)
+                            .find('input[name="type"]')
+                            .val(),
+                        email: $(target)
+                            .find('input[name="email"]')
+                            .val(),
+                        pessoa: $(target)
+                            .find('input[name="pessoa"]')
+                            .val(),
+                        empresa: $(target)
+                            .find('input[name="empresa"]')
+                            .val(),
+                        cidade: $(target)
+                            .find('input[name="cidade"]')
+                            .val(),
+                        telefone: $(target)
+                            .find('input[name="telefone"]')
+                            .val(),
+                        resumo: $(target)
+                            .find('textarea[name="resumo"]')
+                            .val()
+                    })
                 })
-            })
-            $('#form-empresas').hide();
-            $('#success-tab').fadeIn();
-        }
-    });
+                $(target).hide();
+                $(target).parent().find('.empresas-sec__success').fadeIn();
+            }
+        });
 
 })();
