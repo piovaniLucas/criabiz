@@ -1,5 +1,5 @@
 .about-circle {
-    padding-top: 80px;
+    padding-top: 5px;
 
     @media screen and (min-width: $bp-LG) and (max-width: 1368px){
         @include scale(0.8);
@@ -7,7 +7,7 @@
     }
     
     @media screen and (max-width: $bp-LG) {
-        padding-top: 50px;
+        padding-top: 5px;
     }
 
     .bg-grad {
