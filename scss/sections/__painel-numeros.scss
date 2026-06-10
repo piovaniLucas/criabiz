@@ -289,6 +289,92 @@
         }
     }
 
+    @media screen and (max-width: $bp-MD) {
+        &__content {
+            margin-top: 20px;
+            border-radius: 14px;
+            overflow: hidden;
+
+            .header {
+                padding: 14px 16px 14px 18px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .toggle-btn {
+                    right: 16px;
+                    top: 50%;
+                    font-size: 22px;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .info {
+                .column {
+                    &:nth-child(2) {
+                        border-left: none;
+
+                        .content {
+                            padding-left: 16px;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                padding: 18px 16px 10px;
+
+                .group {
+                    margin-bottom: 18px;
+
+                    .financial-number {
+                        min-width: 100%;
+                        font-size: 15px;
+                        line-height: 1.25;
+                        justify-content: flex-start;
+                        padding: 8px 14px;
+                    }
+
+                    .sub-desc {
+                        font-size: 13px;
+                        line-height: 1.4;
+                        margin-left: 4px;
+                        margin-top: 8px;
+                    }
+                }
+
+                .sub-group {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 8px;
+                    margin-bottom: 18px;
+
+                    .financial-number {
+                        min-width: 100%;
+                        font-size: 15px;
+                        line-height: 1.25;
+                        justify-content: flex-start;
+                        padding: 8px 14px;
+                    }
+
+                    .sub-desc {
+                        font-size: 13px;
+                        line-height: 1.4;
+                        margin-left: 4px;
+                        margin-bottom: 0;
+                        padding-right: 0;
+
+                        &.has-mw {
+                            max-width: none;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &__footer {
         background-color: #fff;
         border-radius: 0 0 16px 16px;

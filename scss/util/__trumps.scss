@@ -19,7 +19,7 @@
     @include title();
     color: #839097;
 
-    @media screen and(max-width: $bp-MD) {
+    @media screen and (max-width: $bp-MD) {
         font-size: 30px;
         line-height: 32px;
     }

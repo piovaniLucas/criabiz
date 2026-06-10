@@ -1,0 +1,168 @@
+/* Layout Flexbox Centralizado para Case Investimento */
+
+.case-invest {
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px !important;
+}
+
+.case-invest__wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.case-invest .sub-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.case-invest .sub-header .title {
+  font-size: 2.5rem;
+}
+
+.case-invest .sub-header .line {
+  width: 200px !important;
+  height: 4px;
+  margin: 20px auto 0;
+}
+
+.case-invest__content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* PRIMEIRA LINHA: TEXTO | LOGO | TEXTO */
+.case-invest__top-row {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.case-invest__text-box {
+  flex: 1;
+  max-width: 350px;
+}
+
+.case-invest__text-box .desc {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.case-invest__center-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-invest__center-logo img {
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* SEGUNDA LINHA: LOGOS */
+.case-invest__logos-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.case-invest__logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-invest__logo-item img {
+  height: 90px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 991px) {
+  .case-invest__top-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .case-invest__text-box {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .case-invest__center-logo img {
+    width: 220px;
+  }
+
+  .case-invest__logos-row {
+    gap: 35px;
+  }
+
+  .case-invest__logo-item img {
+    height: 75px;
+    max-width: 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .case-invest {
+    padding: 40px 15px !important;
+    min-height: auto;
+  }
+
+  .case-invest .sub-header {
+    margin-bottom: 40px;
+  }
+
+  .case-invest .sub-header .title {
+    font-size: 1.8rem;
+  }
+
+  .case-invest .sub-header .line {
+    width: 120px !important;
+    height: 3px;
+  }
+
+  .case-invest__content {
+    gap: 40px;
+  }
+
+  .case-invest__text-box .desc {
+    font-size: 14px;
+  }
+
+  .case-invest__center-logo img {
+    width: 180px;
+  }
+
+  .case-invest__logos-row {
+    gap: 25px;
+  }
+
+  .case-invest__logo-item img {
+    height: 60px;
+    max-width: 140px;
+  }
+}
+
+/* Esconder elementos antigos do Bootstrap */
+.case-invest .row {
+  display: none !important;
+}
+
+.case-invest .col-md-4 {
+  display: none !important;
+}

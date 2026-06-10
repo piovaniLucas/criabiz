@@ -38,6 +38,13 @@
             @include scale(0.8);
         }
 
+        a.is-hidden{
+            display: none !important;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+        }
+
         &-main{
             img{
                 width: 135px;
@@ -133,6 +140,19 @@
 
                 @media screen and (max-width: $bp-MD){
                     left: calc(50% + 72px);
+                }
+            }
+
+            &.item-energy{
+                top: -10px;
+                left: calc(50% + 10px);
+
+                @media screen and (max-width: $bp-LG){
+                    left: calc(50% + 13px);
+                }
+
+                @media screen and (max-width: $bp-MD){
+                    left: calc(50% + 10px);
                 }
             }
 

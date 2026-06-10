@@ -1,5 +1,5 @@
 .home-banner {
-    background-color: $c-ventures-primary;
+    background-color: #c74643;
     background-image: url("../images/bg//home-bg-grads.png");
     background-size: 85%;
     background-position: 0px 160px;
@@ -244,6 +244,51 @@
                 max-width: 248px;
                 line-height: 1.5;
                 margin-bottom: 10px;
+            }
+        }
+
+        .banner-tabs {
+            margin-bottom: 18px;
+
+            .tabs-buttons {
+                display: inline-flex;
+                border: 1px solid rgba(255, 255, 255, 0.55);
+                border-radius: 999px;
+                overflow: hidden;
+            }
+
+            .tab-btn {
+                background-color: transparent;
+                border: none;
+                color: rgba(255, 255, 255, 0.88);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.1;
+                padding: 8px 16px;
+                cursor: pointer;
+                @include transition();
+
+                & + .tab-btn {
+                    border-left: 1px solid rgba(255, 255, 255, 0.28);
+                }
+
+                &.active {
+                    background-color: #fff;
+                    color: $c-ventures-primary;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.12);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media screen and (max-width: $bp-MD) {
+                    font-size: 14px;
+                    padding: 6px 12px;
+                }
             }
         }
 
